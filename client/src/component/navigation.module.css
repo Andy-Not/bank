@@ -1,0 +1,36 @@
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+.down-arrow{
+    border: solid black;
+    border-width: 0 2px 2px 0;
+    display: inline-block;
+    padding: 2px;
+    transform: rotate(45deg);
+}
+.nav-wrapper{
+    height: 5rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 15rem 0 11rem;
+}
+.menu{
+    width: auto;
+    display: flex;
+    height: 100%;
+    list-style: none;
+    align-items: end;
+    padding: 0 0 0.5rem 0;
+    font-weight: 600;
+}
+.menu li{
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+}
+.menu li i{
+    margin-left: 6px;
+}
