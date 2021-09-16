@@ -15,7 +15,7 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 0 15rem 0 11rem;
+    padding: 0 11rem;
 }
 .menu{
     width: auto;
@@ -23,7 +23,7 @@
     height: 100%;
     list-style: none;
     align-items: end;
-    padding: 0 0 0.5rem 0;
+    padding: 0 0 1rem 0;
     font-weight: 600;
 }
 .menu li{
@@ -33,4 +33,7 @@
 }
 .menu li i{
     margin-left: 6px;
+}
+.icon{
+    height: 1.2rem;
 }
