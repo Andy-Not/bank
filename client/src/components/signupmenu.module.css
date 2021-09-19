@@ -1,0 +1,125 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Open+Sans:ital,wght@0,300;0,400;0,600;0,700;0,800;1,300;1,400;1,600;1,700;1,800&display=swap');
+*{
+    font-family: 'Open Sans', sans-serif;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.mainBox{
+    background-color:red;
+    width: 19rem;
+    height: auto;
+    border: solid black 0.2px;
+}
+.boxTitle{
+    font-family: 'Bona Nova', serif;
+    font-weight: 500;
+    font-size: 25px;
+    background-color:#174a7c;
+    padding:1rem 0.5rem;
+    text-align: center;
+    color: white;
+}
+.formWrapper{
+    background-color: #ffffff;
+    height:auto;
+    /*was 13 rem*/
+    padding:0.3rem 1rem;
+}
+.formWrapper form{
+    display:flex;
+    justify-content: center;
+    align-content: center;
+    flex-direction: column;
+    width: 100%;
+}
+.usernameDiv{
+    position: relative;
+    height: 2.2rem;
+}
+.inputWrapper{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin: 0.7rem 0;
+    color: #434345;
+}
+.inputWrapper label{
+    font-size: 14px;
+    padding: 0.3rem 0;
+}
+.usernameInput:focus{
+    outline: none;
+    border: 1.3px dotted black;
+}
+.usernameInput{
+    background-color: #dfe0e0;
+    width: 100%;
+    padding: 0.5rem 0.9rem;
+    border: 0.5px solid black;
+    border-radius: 0;
+    position: absolute;
+}
+.signInOptions{
+    font-size: 0.95rem;
+    background-color: white;
+    margin: 1rem 0;
+    display: flex;
+    flex-direction: column;
+}
+.signInOptions span{
+    font-weight: bold;
+}
+.signInOptions a{
+    padding: 0.18rem 0;
+}
+.signInButton{
+    font-weight: 400;
+    font-size: 1rem;
+    background-color: #ab1355;
+    color: white;
+    border: none;
+    padding: 0.7rem 0.7rem;
+}
+.bottomBox{
+    background-color: #434345;
+    height: 9rem;
+    width: 100%;
+    padding: 1rem 1rem;
+    color: white;
+    position: relative;
+}
+.getStartedButton{
+    padding: .5rem;
+    width: 7.8rem;
+    border-radius: 8.3px;
+    background-color: transparent;
+    color: white;
+    border: white solid 1px;
+}
+a{
+    text-decoration: none;
+    color: #174a7c;
+}
+a:hover{
+    text-decoration: underline;
+}
+.openAccTxt{
+    text-align: center;
+    font-weight: 700;
+    font-size: 20px;
+}
+.sandSTxt{
+    font-size: 15px;
+    margin-bottom: 0.5rem;
+    margin-top: 0.3rem;
+    font-style: italic;
+    padding-left: 1rem;
+}
+.gsBttnWrap{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    padding: 1rem;
+}
+
