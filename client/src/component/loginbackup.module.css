@@ -34,7 +34,7 @@
 }
 
 .forgot{
-    font-weight: bold;
+    font-weight: 500;
     margin: 0.6rem 0 0 ;
     color: rgb(182, 2, 80);
 }
@@ -45,6 +45,18 @@
     justify-content: space-between;
     align-items: center;
     margin-bottom: 3rem;
-    font-weight: bold;
+    font-weight: 500;
     color: rgb(182, 2, 80);
+}
+.text-input{
+    margin-bottom: 5rem;
+}
+.input-error{
+    background-color: #ff4115;
+    color: white;
+    text-align: center;
+    padding: 0.7rem;
+    border-radius: 3px;
+    margin-bottom: 1rem;
+    font-weight: 600;
 }
