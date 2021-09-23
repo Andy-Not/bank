@@ -13,6 +13,7 @@ const theme = createMuiTheme({
 
 function App() {
   return (
+      //------- theme wrapper is for MUI theme override
       <ThemeProvider theme={theme}>
           <div className="App">
               <LoginBackup/>
