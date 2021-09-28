@@ -1,7 +1,8 @@
-import logo from './logo.svg';
 import './App.css';
-import LoginBackup from "./component/LoginBackup";
 import { createMuiTheme, ThemeProvider } from "@mui/material";
+import Navigation from "./components/Navigation";
+import Banner from "./components/Banner";
+
 
 const theme = createMuiTheme({
     palette: {
@@ -15,8 +16,9 @@ function App() {
   return (
       //------- theme wrapper is for MUI theme override
       <ThemeProvider theme={theme}>
-          <div className="App">
-              <LoginBackup/>
+          <div>
+              <Navigation/>
+              <Banner/>
           </div>
       </ThemeProvider>
   );

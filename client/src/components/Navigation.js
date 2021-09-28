@@ -1,6 +1,6 @@
 import classes from './navigation.module.css';
 import logo from '../assets/images/logo.png'
-import SearchIcon from '@material-ui/icons/Search';
+import SearchIcon from '@mui/icons-material/Search';
 
 const Navigation = () => {
   return(
@@ -17,11 +17,7 @@ const Navigation = () => {
                   </div>
               </ul>
           </nav>
-          <div style={{height:'100vh', background:'red'}}>
-              ss
-          </div>
       </>
-
   )
 }
 export default Navigation;

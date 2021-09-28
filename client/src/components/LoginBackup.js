@@ -1,5 +1,5 @@
-import classes from './loginbackup.module.css'
-import logo from '../assets/images/loginlogo2.png'
+import classes from './loginbackup.module.css';
+import logo from '../assets/images/loginlogo2.png';
 import Card from '@mui/material/Card';
 import TextField from '@mui/material/TextField';
 import Button from '@mui/material/Button';
@@ -73,8 +73,6 @@ const LoginBackup = () => {
                     </div>
                 </Card>
             </form>
-
-
         </div>
     )
 }
