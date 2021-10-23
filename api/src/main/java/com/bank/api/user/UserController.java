@@ -25,4 +25,18 @@ public class UserController {
         return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
     }
 
+
+    @PostMapping("/registration")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO regUserDTO){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setFirstName(regUserDTO.getSocialSecurity());
+        userEntity.setUserName(regUserDTO.getUserName());
+        userEntity.setLastName(regUserDTO.getPhoneNumber());
+        userEntity.setPassword(regUserDTO.getPassword());
+        userEntity.setEmail(regUserDTO.getEmail());
+
+        return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
+    }
+
 }
