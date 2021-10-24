@@ -25,6 +25,12 @@ public class UserEntity {
     @Column(name = "PASSWORD")
     private String password;
 
+    @Column(name = "PHONENUMBER")
+    private String phoneNumber;
+
+    @Column(name = "SOCIALSECURITY")
+    private String socialSecurity;
+
     public String getUserName() {
         return userName;
     }
@@ -64,4 +70,12 @@ public class UserEntity {
     public void setPassword(String password) {
         this.password = password;
     }
+
+    public String getPhoneNumber() { return phoneNumber; }
+
+    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+
+    public String getSocialSecurity() { return socialSecurity; }
+
+    public void setSocialSecurity(String socialSecurity) { this.socialSecurity = socialSecurity; }
 }

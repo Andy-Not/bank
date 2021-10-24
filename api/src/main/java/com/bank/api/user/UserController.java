@@ -28,13 +28,13 @@ public class UserController {
 
     @PostMapping("/registration")
     @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO regUserDTO){
+    public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO userRegDTO){
         UserEntity userEntity = new UserEntity();
-        userEntity.setFirstName(regUserDTO.getSocialSecurity());
-        userEntity.setUserName(regUserDTO.getUserName());
-        userEntity.setLastName(regUserDTO.getPhoneNumber());
-        userEntity.setPassword(regUserDTO.getPassword());
-        userEntity.setEmail(regUserDTO.getEmail());
+        userEntity.setFirstName(userRegDTO.getSocialSecurity());
+        userEntity.setUserName(userRegDTO.getUserName());
+        userEntity.setLastName(userRegDTO.getPhoneNumber());
+        userEntity.setPassword(userRegDTO.getPassword());
+        userEntity.setEmail(userRegDTO.getEmail());
 
         return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
     }
