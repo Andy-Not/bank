@@ -30,11 +30,11 @@ public class UserController {
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO userRegDTO){
         UserEntity userEntity = new UserEntity();
-        userEntity.setFirstName(userRegDTO.getSocialSecurity());
+        userEntity.setSocialSecurity(userRegDTO.getSocialSecurity());
         userEntity.setUserName(userRegDTO.getUserName());
-        userEntity.setLastName(userRegDTO.getPhoneNumber());
         userEntity.setPassword(userRegDTO.getPassword());
         userEntity.setEmail(userRegDTO.getEmail());
+        userEntity.setPhoneNumber(userRegDTO.getPhoneNumber());
 
         return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
     }
