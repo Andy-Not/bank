@@ -6,29 +6,29 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 
 @Entity
-@Table(name = "User", schema = "bank")
+@Table(name = "User", schema = "andy123")
 public class UserEntity {
 
     @Id
-    @Column(name = "USER_NAME")
+    @Column(name = "USER_NAME", nullable = false, unique = true)
     private String userName;
 
-    @Column(name = "FIRST_NAME")
+    @Column(name = "FIRST_NAME", nullable = false)
     private String firstName;
 
-    @Column(name = "LAST_NAME")
+    @Column(name = "LAST_NAME", nullable = false)
     private String lastName;
 
-    @Column(name = "EMAIL")
+    @Column(name = "EMAIL", nullable = false, unique = true)
     private String email;
 
-    @Column(name = "PASSWORD")
+    @Column(name = "PASSWORD", nullable = false)
     private String password;
 
-    @Column(name = "PHONENUMBER")
-    private String phoneNumber;
+    @Column(name = "PHONENUMBER", nullable = false, unique = true)
+    private int phoneNumber;
 
-    @Column(name = "SOCIALSECURITY")
+    @Column(name = "SOCIALSECURITY", nullable = false, unique = true)
     private String socialSecurity;
 
     public String getUserName() {
@@ -71,9 +71,9 @@ public class UserEntity {
         this.password = password;
     }
 
-    public String getPhoneNumber() { return phoneNumber; }
+    public int getPhoneNumber() { return phoneNumber; }
 
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber; }
 
     public String getSocialSecurity() { return socialSecurity; }
 

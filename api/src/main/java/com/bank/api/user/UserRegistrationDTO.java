@@ -6,7 +6,7 @@ public class UserRegistrationDTO {
     private String password;
     private String email;
     private String socialSecurity;
-    private String phoneNumber;
+    private int phoneNumber;
 
     public String getUserName() {
         return userName;
@@ -36,7 +36,7 @@ public class UserRegistrationDTO {
 
     public void setSocialSecurity(String socialSecurity) { this.socialSecurity = socialSecurity; }
 
-    public String getPhoneNumber() { return phoneNumber; }
+    public int getPhoneNumber() { return phoneNumber; }
 
-    public void setPhoneNumber(String phoneNumber) { this.phoneNumber = phoneNumber; }
+    public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber; }
 }
