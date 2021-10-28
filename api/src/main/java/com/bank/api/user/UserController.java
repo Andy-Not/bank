@@ -25,4 +25,33 @@ public class UserController {
         return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
     }
 
+
+    @PostMapping("/registration")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO userRegDTO){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setSocialSecurity(userRegDTO.getSocialSecurity());
+        userEntity.setUserName(userRegDTO.getUserName());
+        userEntity.setPassword(userRegDTO.getPassword());
+        userEntity.setEmail(userRegDTO.getEmail());
+        userEntity.setPhoneNumber(userRegDTO.getPhoneNumber());
+        return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
+    }
+
+    @GetMapping("/getUserByUsername")
+    public ResponseEntity<UserEntity> getUserByUsername(@RequestBody UserDTO userDTO){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUserName(userDTO.getUserName());
+
+        return new ResponseEntity(userService.getUserByUsername(userEntity),HttpStatus.OK);
+    }
+
+    @DeleteMapping("/deleteUserByUsername")
+    public ResponseEntity<String> deleteUserByUsername(@RequestBody UserDTO userDTO){
+        UserEntity userEntity = new UserEntity();
+        userEntity.setUserName(userDTO.getUserName());
+
+        return new ResponseEntity(userService.deleteUserByUsername(userEntity), HttpStatus.OK);
+    }
+
 }
