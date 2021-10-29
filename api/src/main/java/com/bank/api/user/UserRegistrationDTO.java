@@ -2,11 +2,29 @@ package com.bank.api.user;
 
 public class UserRegistrationDTO {
 
+    private String firstName;
+    private String lastName;
     private String userName;
     private String password;
     private String email;
     private String socialSecurity;
     private int phoneNumber;
+
+    public String getFirstName() {
+        return firstName;
+    }
+
+    public void setFirstName(String firstName) {
+        this.firstName = firstName;
+    }
+
+    public String getLastName() {
+        return lastName;
+    }
+
+    public void setLastName(String lastName) {
+        this.lastName = lastName;
+    }
 
     public String getUserName() {
         return userName;
@@ -32,11 +50,19 @@ public class UserRegistrationDTO {
         this.email = email;
     }
 
-    public String getSocialSecurity() { return socialSecurity; }
+    public String getSocialSecurity() {
+        return socialSecurity;
+    }
 
-    public void setSocialSecurity(String socialSecurity) { this.socialSecurity = socialSecurity; }
+    public void setSocialSecurity(String socialSecurity) {
+        this.socialSecurity = socialSecurity;
+    }
 
-    public int getPhoneNumber() { return phoneNumber; }
+    public int getPhoneNumber() {
+        return phoneNumber;
+    }
 
-    public void setPhoneNumber(int phoneNumber) { this.phoneNumber = phoneNumber; }
+    public void setPhoneNumber(int phoneNumber) {
+        this.phoneNumber = phoneNumber;
+    }
 }

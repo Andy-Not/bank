@@ -12,34 +12,22 @@ public class UserController {
     @Autowired
     private UserService userService;
 
-    @PostMapping("/register")
-    @ResponseStatus(HttpStatus.CREATED)
-    public ResponseEntity<String> register(@RequestBody UserDTO userDTO){
-        UserEntity userEntity = new UserEntity();
-        userEntity.setFirstName(userDTO.getFirstName());
-        userEntity.setUserName(userDTO.getUserName());
-        userEntity.setLastName(userDTO.getLastName());
-        userEntity.setPassword(userDTO.getPassword());
-        userEntity.setEmail(userDTO.getEmail());
-
-        return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
-    }
-
-
     @PostMapping("/registration")
     @ResponseStatus(HttpStatus.CREATED)
     public ResponseEntity<String> registration(@RequestBody UserRegistrationDTO userRegDTO){
         UserEntity userEntity = new UserEntity();
-        userEntity.setSocialSecurity(userRegDTO.getSocialSecurity());
+        userEntity.setFirstName(userRegDTO.getFirstName());
+        userEntity.setLastName(userRegDTO.getLastName());
         userEntity.setUserName(userRegDTO.getUserName());
         userEntity.setPassword(userRegDTO.getPassword());
         userEntity.setEmail(userRegDTO.getEmail());
+        userEntity.setSocialSecurity(userRegDTO.getSocialSecurity());
         userEntity.setPhoneNumber(userRegDTO.getPhoneNumber());
-        return new ResponseEntity(userService.register(userEntity), HttpStatus.OK);
+        return new ResponseEntity(userService.registerUser(userEntity), HttpStatus.OK);
     }
 
     @GetMapping("/getUserByUsername")
-    public ResponseEntity<UserEntity> getUserByUsername(@RequestBody UserDTO userDTO){
+    public ResponseEntity<UserEntity> getUserByUsername(@RequestBody UserRegistrationDTO userDTO){
         UserEntity userEntity = new UserEntity();
         userEntity.setUserName(userDTO.getUserName());
 
@@ -47,7 +35,7 @@ public class UserController {
     }
 
     @DeleteMapping("/deleteUserByUsername")
-    public ResponseEntity<String> deleteUserByUsername(@RequestBody UserDTO userDTO){
+    public ResponseEntity<String> deleteUserByUsername(@RequestBody UserRegistrationDTO userDTO){
         UserEntity userEntity = new UserEntity();
         userEntity.setUserName(userDTO.getUserName());
 
