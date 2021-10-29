@@ -21,13 +21,13 @@ public class UserService {
         this.userRepository = userRepository;
     }
 
-    public String register(UserEntity user) {
+    public String registerUser(UserEntity user) {
         if (user != null) {
             userRepository.save(user);
             logger.debug(user.getUserName() + "is registered");
-            return "success";
+            return "Your account has been created.";
         }
-        return "failed";
+        return "failed to create your account!";
     }
 
     public UserEntity getUserByUsername(UserEntity userEntity) {
