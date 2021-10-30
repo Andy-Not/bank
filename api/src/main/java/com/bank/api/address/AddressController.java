@@ -6,11 +6,13 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
+@CrossOrigin
 @RequestMapping("/address")
 public class AddressController {
 
     @Autowired
     private  AddressService addressService;
+
 
     @PostMapping("/addAddress")
     @ResponseStatus(HttpStatus.CREATED)
