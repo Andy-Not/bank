@@ -24,4 +24,16 @@ public class AddressController {
         return new ResponseEntity(addressService.address(addressEntity), HttpStatus.OK);
     }
 
+    @PutMapping("/updateAddress")
+    @ResponseStatus(HttpStatus.CREATED)
+    public ResponseEntity<String> update(@RequestBody AddressDTO addressUpdateDTO){
+        AddressEntity updateAddressEntity = new AddressEntity();
+        updateAddressEntity.setCity(addressUpdateDTO.getCity());
+        updateAddressEntity.setStreet(addressUpdateDTO.getStreet());
+        updateAddressEntity.setState(addressUpdateDTO.getState());
+        updateAddressEntity.setZipCode(addressUpdateDTO.getZipCode());
+
+        return new ResponseEntity(addressService.updateAddress(updateAddressEntity), HttpStatus.OK);
+    }
+
 }

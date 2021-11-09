@@ -1,6 +1,8 @@
 package com.bank.api.address;
 
 
+import com.bank.api.user.UserEntity;
+
 import javax.persistence.*;
 
 @Entity
@@ -11,6 +13,10 @@ public class AddressEntity {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "ID", nullable = false, unique = true)
     private long id;
+
+    @OneToOne(cascade = CascadeType.ALL)
+    @JoinColumn(name = "user_name", referencedColumnName = "user_name", nullable = false)
+    private UserEntity user;
 
     @Column(name = "STREET", nullable = false)
     private String street;
@@ -24,12 +30,21 @@ public class AddressEntity {
     @Column(name = "STATE", nullable = false)
     private String state;
 
+
     public long getId() {
         return id;
     }
 
     public void setId(long id) {
         this.id = id;
+    }
+
+    public UserEntity getUser() {
+        return user;
+    }
+
+    public void setUser(UserEntity user) {
+        this.user = user;
     }
 
     public String getStreet() {

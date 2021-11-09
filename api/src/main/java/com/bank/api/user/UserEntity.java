@@ -1,9 +1,8 @@
 package com.bank.api.user;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import com.bank.api.address.AddressEntity;
+
+import javax.persistence.*;
 
 @Entity
 @Table(name = "User", schema = "andy123")
@@ -31,8 +30,21 @@ public class UserEntity {
     @Column(name = "SOCIALSECURITY", nullable = false, unique = true)
     private String socialSecurity;
 
+    @OneToOne(mappedBy = "user")
+     private AddressEntity address;
+
+
+
     public String getUserName() {
         return userName;
+    }
+
+    public AddressEntity getAddress() {
+        return address;
+    }
+
+    public void setAddress(AddressEntity address) {
+        this.address = address;
     }
 
     public void setUserName(String userName) {

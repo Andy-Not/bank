@@ -21,4 +21,8 @@ public class AddressService {
         }
         return "there was a error when saving the address";
     }
+
+    public String updateAddress(AddressEntity update) {
+        return "hi";
+    }
 }

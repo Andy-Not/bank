@@ -2,10 +2,19 @@ package com.bank.api.address;
 
 public class AddressDTO {
 
+    private String userName;
     private String city;
     private String street;
     private String state;
     private int zipCode;
+
+    public String getUserName() {
+        return userName;
+    }
+
+    public void setUserName(String userName) {
+        this.userName = userName;
+    }
 
     public String getCity() {
         return city;
